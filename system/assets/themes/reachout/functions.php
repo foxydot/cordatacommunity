@@ -110,7 +110,7 @@ add_action( 'msdlab_pre_header', 'genesis_do_subnav' );
 remove_action('genesis_header','genesis_do_header' );
 add_action('genesis_header','msdlab_do_header' );
 
-add_action('genesis_header','msdlab_header_right' );
+//add_action('genesis_header','msdlab_header_right' );
 
 /*** NAV ***/
 /**
@@ -153,7 +153,7 @@ add_action( 'genesis_after_endwhile', 'msdlab_prev_next_post_nav' );
 /*** FOOTER ***/
 add_theme_support( 'genesis-footer-widgets', 1 ); //adds automatic footer widgets
 //add the menu
-add_action('genesis_before_footer','msdlab_do_footer_menu', 20);
+//add_action('genesis_before_footer','msdlab_do_footer_menu', 20);
 
 //add_action('genesis_before_footer','msdlab_do_footer_widget', 1);
 

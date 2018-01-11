@@ -9,7 +9,7 @@
 }
 
 .footer-widgets {
-  background-color: $yellow;
+  background-color: $white;
   clear: both;
   padding: 0.5vw 0;
   a {
@@ -22,10 +22,6 @@
 
   .widget {
     margin: 0.5vw auto;
-    float: none;
-    clear: both;
-    display: block;
-    text-align: center;
   }
   .connected-social{
     .social-media{
@@ -152,6 +148,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
+  background-color: $offwhite;
   color: $dkgrey;
   @include sansserif(0.8);
   font-size: 2.5vw;

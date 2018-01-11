@@ -25,8 +25,10 @@ jQuery(document).ready(function($) {
     $('.section.overlay').wrapInner('<div class="overlay"></div>');
 
 
-    var numwidgets = $('#footer-widgets div.widget').length;
-	$('#footer-widgets').addClass('cols-'+numwidgets);
+    var numwidgets = $('#genesis-footer-widgets section.widget').length;
+    var widget_cols = (12/numwidgets);
+    $('#genesis-footer-widgets section.widget').addClass('col-md-' + widget_cols);
+
 	$.each(['show', 'hide'], function (i, ev) {
         var el = $.fn[ev];
         $.fn[ev] = function () {

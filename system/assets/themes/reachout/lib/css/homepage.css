@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Vollkorn:400,700);
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Vollkorn");
 @media print {
   a[href]:after {
     content: "" !important; }
@@ -18,13 +18,10 @@
 /* Neutrals */
 /* Default Colors */
 /* Social Colors */
-.sectioned-page-wrapper .section.section-quote {
-  text-align: center; }
-  .sectioned-page-wrapper .section.section-quote .section-body {
-    font-weight: 500;
-    color: #FFF;
-    font-style: italic;
-    font-size: 3em; }
+.sectioned-page-wrapper .section.section-learn-more .section-body {
+  font-weight: 500;
+  color: #FFF;
+  font-size: 3em; }
 
 @media only screen and (min-width: 768px) {
   .sectioned-page-wrapper {

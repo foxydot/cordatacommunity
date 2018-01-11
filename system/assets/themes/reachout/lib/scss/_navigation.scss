@@ -240,15 +240,16 @@
     font-weight: 600;
     .menu-item{
       a{
+        color: $white;
         text-transform: uppercase;
         letter-spacing: 1px;
-        border-bottom: 4px solid transparent;
+        border-bottom: 2px solid transparent;
       }
     }
     a:focus, a:hover,
     .current-menu-item > a{
-      color: $dkgrey;
-      border-bottom: 4px solid $yellow;
+      color: rgba($white,0.8);
+      border-bottom: 2px solid rgba($white,0.8);
     }
     .menu-item{
       .sub-menu{
@@ -261,10 +262,10 @@
           border-bottom: 0;
         }
         a:hover, a:focus{
-           color: $yellow;
+           color: rgba($white,0.8);
         }
         &.current-menu-item > a{
-          color: $yellow;
+          color: $white;
         }
       }
     }

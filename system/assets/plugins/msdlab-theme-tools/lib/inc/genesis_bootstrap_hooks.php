@@ -44,7 +44,7 @@ class MSDLab_Genesis_Bootstrap
             'footer',
         );
         foreach($wraps AS $context) {
-            add_filter("genesis_structural_wrap-{$context}", array(&$this, 'msdlab_bootstrap_wraps'), 10);
+            add_filter("genesis_structural_wrap-{$context}", array(&$this, 'msdlab_bootstrap_wraps'), 10, 2);
         }
         add_filter('genesis_attr_title-area', array(&$this,'msdlab_bootstrap_site_title_area'), 10);
 
@@ -176,9 +176,12 @@ class MSDLab_Genesis_Bootstrap
         return $attributes;
     }
 
-    function msdlab_bootstrap_wraps($string){
-        $string = '<div class="container">';
-        return $string;
+    function msdlab_bootstrap_wraps($output, $original_output){
+        print $output;
+        if($original_output == "open") {
+            $output = '<div class="container">';
+        }
+        return $output;
     }
 
     function msdlab_bootstrap_site_title_area($attributes){

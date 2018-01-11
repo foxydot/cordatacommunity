@@ -25,8 +25,10 @@
     position: relative;
     .section-title{
       margin-bottom: 4em;
+      text-align: center;
       h3 {
         text-transform: uppercase;
+        font-size: 3em;
       }
     }
     .section-body{
@@ -43,8 +45,8 @@
       }
     }
     ul{
-      margin: 0 auto;
-      display: inline-block;
+      margin: 0 auto 1em;
+      display: block;
       li{
         text-align: left;
         margin-bottom: 0.5em;
@@ -53,6 +55,7 @@
           content: '\f058';
           color: $blue;
           margin-right: 0.5em;
+          margin-left: 2em;
         }
       }
     }
@@ -63,7 +66,7 @@
   .section.overlay{
     padding: 0;
     .overlay{
-      background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.5) 100%);
+      background: linear-gradient(to bottom, rgba($blue,0.8) 0%,rgba($blue,0.5) 100%);
       background-attachment: fixed;
       padding: 8em 0;
     }
@@ -74,10 +77,16 @@
   .section.bkg-ltgrey{
     background-color: $ltgrey;
   }
-  .section.bkg-yellow{
-    background-color: $yellow;
+  .section.bkg-orange{
+    background-color: $orange;
+  }
+  .section.bkg-blue{
+    background-color: $blue;
   }
   .section.bkg-white{
+    background-color: $white;
+  }
+  .section.bkg-offwhite{
     background-color: $offwhite;
   }
   .section.text-dkgrey{
@@ -89,16 +98,28 @@
   .section.text-shadow{
     text-shadow: 0 0 0.5em rgba($dkgrey,0.6);
   }
-  .section.col-odd-white{
+  .section.col-odd-offwhite{
     .column-1,.column-3{
-      background-color: $white;
+      background-color: rgba($ltblue,0.4);
       padding: 1em;
+      border-radius: 3em;
+      border: 1em solid $white;
+      h4{
+        font-size: 2em;
+        color: $blue;
+      }
     }
   }
   .section.col-even-ltgrey{
     .column-2,.column-4{
-      background-color: rgb(95%, 95%, 95%);
+      background-color: rgba($ltblue,0.8);
       padding: 1em;
+      border-radius: 3em;
+      border: 1em solid $white;
+      h4{
+        font-size: 2em;
+        color: $blue;
+      }
     }
   }
   .section.left-align{
@@ -107,7 +128,7 @@
     }
   }
   .section{
-    .text-green{
+    .text-blue{
       color: $blue;
     }
     p.price{
@@ -136,6 +157,13 @@
       font-size: 4em;
       transition: all 0.5s;
       display: inline-block;
+    }
+  }
+  .section.hs-hook {
+    .section-body{
+      font-weight: 500;;
+      color: $white;
+      font-size: 3em;
     }
   }
   a.fa.fa-angle-down {

@@ -1,12 +1,10 @@
 @import "bootstrap-overrides.scss";
 @import "mixins.scss";
 .sectioned-page-wrapper {
-  .section.section-quote {
-    text-align: center;
+  .section.section-learn-more {
     .section-body{
       font-weight: 500;;
       color: $white;
-      font-style: italic;
       font-size: 3em;
     }
   }
