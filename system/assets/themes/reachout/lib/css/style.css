@@ -402,17 +402,20 @@ input[type="reset"],
 input[type="submit"],
 .button,
 a.btn {
-  background-color: #4ca8df;
-  border: 0;
-  color: #edf6fc;
+  background-color: #edf6fc;
+  border: 1px solid #4ca8df;
+  color: #4ca8df;
   cursor: pointer;
+  font-size: 1em;
   text-decoration: none;
   white-space: normal;
   width: auto;
   border-radius: 0;
-  padding: 0.5em 2em;
+  padding: 0.5em;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 700;
+  text-align: center;
+  border-radius: 0.2em; }
 
 button:focus,
 button:hover,
@@ -427,11 +430,11 @@ input[type="submit"]:hover,
 a.btn:focus,
 a.btn:hover {
   background-color: #c9e5f5;
-  color: #edf6fc; }
+  color: #4ca8df; }
 
 .entry-content .button:focus,
 .entry-content .button:hover {
-  color: #edf6fc; }
+  color: #4ca8df; }
 
 .button {
   display: inline-block; }
@@ -1461,7 +1464,7 @@ p.entry-meta {
   padding: 3vw; }
 
 .footer-widgets {
-  background-color: #FFF;
+  background-color: #edf6fc;
   clear: both;
   padding: 0.5vw 0; }
   .footer-widgets a {

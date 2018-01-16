@@ -30,15 +30,4 @@
 @media only screen and (min-width: 1024px) {
   .sectioned-page-wrapper .section.section-banner a:not(.button), .sectioned-page-wrapper .section.section-banner a:not(.button):visited, .sectioned-page-wrapper .section.section-banner a:not(.button):active {
     color: #2A2B30;
-    text-decoration: underline; }
-  .sectioned-page-wrapper .section.section-learn-more .section-body .row {
-    display: flex; }
-    .sectioned-page-wrapper .section.section-learn-more .section-body .row .section-content {
-      padding-bottom: 4em; }
-      .sectioned-page-wrapper .section.section-learn-more .section-body .row .section-content > .last-child {
-        position: absolute;
-        bottom: 1em;
-        left: 0;
-        right: 0;
-        margin: 0;
-        padding-top: 3em; } }
+    text-decoration: underline; } }
