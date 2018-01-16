@@ -163,8 +163,12 @@
 /* ## Typographical Elements
 --------------------------------------------- */
 html {
-  font-size: 62.5%;
-  /* 10px browser default */ }
+  font-size: 2.5vw; }
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 62.5%;
+    /* 10px browser default */ } }
 
 /* Chrome fix */
 body {
@@ -262,13 +266,13 @@ h6 {
   margin: 0 0 10px; }
 
 h1 {
-  font-size: 3.2em; }
+  font-size: 2em; }
 
 h2 {
-  font-size: 2.4em; }
+  font-size: 1.7em; }
 
 h3 {
-  font-size: 1.8em; }
+  font-size: 1.4em; }
 
 h4 {
   font-size: 1.2em;
@@ -279,6 +283,14 @@ h5 {
 
 h6 {
   font-size: 1em; }
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.2em; }
+  h2 {
+    font-size: 2.4em; }
+  h3 {
+    font-size: 1.8em; } }
 
 /* ## Objects
 --------------------------------------------- */
@@ -1623,10 +1635,10 @@ p.entry-meta {
   .sectioned-page-wrapper .section {
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 8em 0;
+    padding: 4em 0;
     position: relative; }
     .sectioned-page-wrapper .section .section-title {
-      margin-bottom: 4em;
+      margin-bottom: 2em;
       text-align: center; }
       .sectioned-page-wrapper .section .section-title h3 {
         text-transform: uppercase;
@@ -1643,14 +1655,17 @@ p.entry-meta {
       margin: 0 auto 1em;
       display: block; }
       .sectioned-page-wrapper .section ul li {
+        list-style: disc;
         text-align: left;
-        margin-bottom: 0.5em; }
-        .sectioned-page-wrapper .section ul li:before {
-          font-family: FontAwesome;
+        margin-bottom: 0.5em;
+        margin-left: 1.5em;
+        /*&:before{
+          @include fontawesome;
           content: '\f058';
-          color: #4ca8df;
+          color: $blue;
           margin-right: 0.5em;
-          margin-left: 2em; }
+          margin-left: 2em;
+        }*/ }
     .sectioned-page-wrapper .section p.lead {
       font-size: 2.4em; }
   .sectioned-page-wrapper .section.overlay {
@@ -1751,8 +1766,10 @@ p.entry-meta {
         margin: 0 auto 1em; }
 
 @media only screen and (min-width: 768px) {
-  .sectioned-page-wrapper .section i.fa.fa-plus {
-    margin-top: 0.8em; } }
+  .sectioned-page-wrapper {
+    padding-top: 80px; }
+    .sectioned-page-wrapper .section i.fa.fa-plus {
+      margin-top: 0.8em; } }
 
 .site-header > .container {
   position: relative; }
@@ -1878,6 +1895,8 @@ i.fa {
   ---------------------------------------------------------------------------------------------------- */
   /* # Site Header
   ---------------------------------------------------------------------------------------------------- */
+  .site-header > .wrap > .container {
+    position: relative; }
   /* ## Title Area
   --------------------------------------------- */
   .title-area {

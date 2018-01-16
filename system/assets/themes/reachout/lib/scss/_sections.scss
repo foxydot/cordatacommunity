@@ -21,10 +21,10 @@
   .section{
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 8em 0;
+    padding: 4em 0;
     position: relative;
     .section-title{
-      margin-bottom: 4em;
+      margin-bottom: 2em;
       text-align: center;
       h3 {
         text-transform: uppercase;
@@ -48,15 +48,17 @@
       margin: 0 auto 1em;
       display: block;
       li{
+        list-style: disc;
         text-align: left;
         margin-bottom: 0.5em;
-        &:before{
+        margin-left: 1.5em;
+        /*&:before{
           @include fontawesome;
           content: '\f058';
           color: $blue;
           margin-right: 0.5em;
           margin-left: 2em;
-        }
+        }*/
       }
     }
     p.lead{
@@ -204,6 +206,7 @@
 
 @media only screen and (min-width: 768px) {
   .sectioned-page-wrapper {
+    padding-top: 80px;
     .section{
       i.fa.fa-plus{
         margin-top: 0.8em;
