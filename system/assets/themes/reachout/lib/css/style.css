@@ -1850,6 +1850,9 @@ i.fa {
 .footer-widgets .msd-connected .connected-social {
   clear: both; }
 
+.archive-description {
+  display: none; }
+
 @media only screen and (min-width: 768px) {
   /* Accessible Menu
   --------------------------------------------- */
