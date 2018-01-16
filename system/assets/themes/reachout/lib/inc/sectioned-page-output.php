@@ -1,5 +1,4 @@
 <?php
-
 class customSections{
     
     function default_output($section,$i){

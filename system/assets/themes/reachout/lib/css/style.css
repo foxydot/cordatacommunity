@@ -1797,6 +1797,9 @@ p.entry-meta {
     color: #edf6fc;
     background: #4ca8df; }
 
+.entry-subtitle {
+  font-size: 1.6em; }
+
 i.fa {
   margin: 0 auto; }
 

@@ -235,7 +235,7 @@ function msdlab_add_blog_grid_body_class($classes){
     return $classes;
 }
 
-add_filter( 'genesis_pre_get_option_site_layout', 'msdlab_add_sidebar_to_single_posts' );
+//add_filter( 'genesis_pre_get_option_site_layout', 'msdlab_add_sidebar_to_single_posts' );
 
 function msdlab_add_sidebar_to_single_posts($layout){
     global $post;

@@ -398,3 +398,15 @@ function sk_excerpts_search_page() {
 function sk_show_excerpts() {
     return 'excerpts';
 }
+
+
+add_filter('genesis_pre_get_option_site_layout','msdlab_set_genesis_layout');
+function msdlab_set_genesis_layout($layout){
+    global $post;
+    $template = get_post_meta($post->ID,'_wp_page_template',true);
+    if($template == 'page-sectioned.php'){
+       $layout =  'full-width-content';
+    }
+    //error_log($layout);
+    return $layout;
+}
