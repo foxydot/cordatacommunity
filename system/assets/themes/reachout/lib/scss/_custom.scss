@@ -77,6 +77,17 @@ i.fa{
 }
 
 .footer-widgets{
+  .widget.logo-title{
+    .widget-title{
+      background-image: url('../images/Cordata_community_Logo_Color.png');
+      background-position: left center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 2em;
+      display: block;
+      text-indent: -9999px;
+    }
+  }
   .msd-connected{
     .connected-form{
       display: block;
