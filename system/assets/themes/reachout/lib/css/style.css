@@ -1185,7 +1185,6 @@ img.alignright,
 /* ## After Header Navigation
 --------------------------------------------- */
 .nav-primary {
-  position: absolute;
   bottom: 0;
   right: 0; }
   .nav-primary .menu {
@@ -1833,8 +1832,8 @@ i.fa {
 @media only screen and (min-width: 768px) {
   /* Accessible Menu
   --------------------------------------------- */
-  .site-inner {
-    margin-top: 9em; }
+  .nav-primary {
+    position: absolute; }
   .menu .menu-item:focus {
     position: static; }
   .menu .menu-item > a:focus + ul.sub-menu,
