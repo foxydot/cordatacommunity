@@ -288,7 +288,7 @@ h6 {
   h1 {
     font-size: 3.2em; }
   h2 {
-    font-size: 2.4em; }
+    font-size: 2em; }
   h3 {
     font-size: 1.8em; } }
 
@@ -692,7 +692,8 @@ th:first-child {
 
 .entry-title {
   color: #f1952d;
-  font-weight: 700; }
+  font-weight: 700;
+  font-size: 2em; }
 
 .entry-title a,
 .sidebar .widget-title a {
@@ -1753,24 +1754,22 @@ p.entry-meta {
       background: #4ca8df;
       color: #edf6fc;
       border: 2px solid #4ca8df; }
-  .sectioned-page-wrapper .section.first-child {
-    padding-top: 27em; }
-    .sectioned-page-wrapper .section.first-child.overlay {
-      padding-top: 0; }
-    .sectioned-page-wrapper .section.first-child .overlay {
-      padding-top: 14em;
-      height: 500px;
-      text-align: center; }
-      .sectioned-page-wrapper .section.first-child .overlay .section-title h3 {
-        font-size: 4em;
-        font-weight: 500; }
-      .sectioned-page-wrapper .section.first-child .overlay p {
-        max-width: 700px;
-        margin: 0 auto 1em; }
+  .sectioned-page-wrapper .section.first-child.overlay {
+    padding-top: 0; }
+  .sectioned-page-wrapper .section.first-child .overlay {
+    padding-top: 14em;
+    height: 500px;
+    text-align: center; }
+    .sectioned-page-wrapper .section.first-child .overlay .section-title h3 {
+      font-size: 4em;
+      font-weight: 500; }
+    .sectioned-page-wrapper .section.first-child .overlay p {
+      max-width: 700px;
+      margin: 0 auto 1em; }
 
 @media only screen and (min-width: 768px) {
   .sectioned-page-wrapper {
-    padding-top: 80px; }
+    padding-top: 12em; }
     .sectioned-page-wrapper .section i.fa.fa-plus {
       margin-top: 0.8em; } }
 
@@ -1844,24 +1843,26 @@ i.fa {
 
 .footer-widgets .msd-connected .connected-form {
   display: block; }
-  .footer-widgets .msd-connected .connected-form .gform_body {
-    width: 75%;
-    float: left; }
-    .footer-widgets .msd-connected .connected-form .gform_body input {
-      width: 100%; }
-    .footer-widgets .msd-connected .connected-form .gform_body label {
-      display: none; }
-  .footer-widgets .msd-connected .connected-form .gform_footer {
-    width: 25%;
-    float: left;
-    clear: none;
-    margin: 0; }
 
 .footer-widgets .msd-connected .connected-social {
   clear: both; }
 
 .archive-description {
   display: none; }
+
+#gform_1 .gform_body {
+  width: 50%;
+  float: left; }
+  #gform_1 .gform_body input {
+    width: 100%; }
+  #gform_1 .gform_body label {
+    display: none; }
+
+#gform_1 .gform_footer {
+  width: 50%;
+  float: left;
+  clear: none;
+  margin: 0; }
 
 @media only screen and (min-width: 768px) {
   /* Accessible Menu

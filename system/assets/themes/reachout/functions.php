@@ -30,7 +30,7 @@ include_once( get_stylesheet_directory() . '/lib/inc/helper-functions.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/msd-functions.php' ); //should this go to plugin?
 include_once( get_stylesheet_directory() . '/lib/inc/header-login.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/page-banner-support.php' );
-include_once( get_stylesheet_directory() . '/lib/inc/genesis_blog_grid.php' );
+//include_once( get_stylesheet_directory() . '/lib/inc/genesis_blog_grid.php' );
 //new MSDLab_Page_Banner_Support(array());
 
 // Child theme (do not remove).
@@ -89,10 +89,10 @@ if(class_exists('MSDLab_Genesis_Tweaks')){
     );
     $gtweaks = new MSDLab_Genesis_Tweaks($options);
 }
-/*if(class_exists('MSDLab_Subtitle_Support')){
+if(class_exists('MSDLab_Subtitle_Support')){
     $options = array();
     $subtitle_support = new MSDLab_Subtitle_Support($options);
-}*/
+}
 
 
 /*** HEADER ***/

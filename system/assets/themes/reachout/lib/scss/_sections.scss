@@ -185,7 +185,6 @@
   }
   //specific sections
   .section.first-child{
-    padding-top: 27em;
     &.overlay{
       padding-top: 0;
     }
@@ -207,7 +206,7 @@
 
 @media only screen and (min-width: 768px) {
   .sectioned-page-wrapper {
-    padding-top: 80px;
+    padding-top: 12em;
     .section{
       i.fa.fa-plus{
         margin-top: 0.8em;
