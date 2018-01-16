@@ -1637,6 +1637,7 @@ p.entry-meta {
   .sectioned-page-wrapper .section {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     padding: 4em 0;
     position: relative; }
     .sectioned-page-wrapper .section .section-title {
@@ -1660,7 +1661,7 @@ p.entry-meta {
         list-style: disc;
         text-align: left;
         margin-bottom: 0.5em;
-        margin-left: 1.5em;
+        margin-left: 4em;
         /*&:before{
           @include fontawesome;
           content: '\f058';
