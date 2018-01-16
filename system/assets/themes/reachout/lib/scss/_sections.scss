@@ -156,11 +156,6 @@
         color: $offwhite;
       }
     }
-    i.fa {
-      font-size: 4em;
-      transition: all 0.5s;
-      display: inline-block;
-    }
   }
   .section.hs-hook {
     .section-body{
@@ -207,10 +202,5 @@
 @media only screen and (min-width: 768px) {
   .sectioned-page-wrapper {
     padding-top: 12em;
-    .section{
-      i.fa.fa-plus{
-        margin-top: 0.8em;
-      }
-    }
   }
 }

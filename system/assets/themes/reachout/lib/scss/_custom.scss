@@ -123,3 +123,41 @@ i.fa{
     margin: 0;
   }
 }
+
+
+.team-display-grid{
+  .team{
+    .name{
+      color: $orange;
+    }
+    .jobtitle{}
+    .team_member-contact-info,.team_member-social-info{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li{
+        display: inline-block;
+        margin: 0;
+        padding: 0 0.5em;
+      }
+    }
+    .team_member-social-info{
+      margin-bottom: 2em;
+      li{
+        a{
+          display: inline-block;
+          background-color: $blue;
+          border-radius: 100%;
+          color: $white;
+          height: 2em;
+          width: 2em;
+          text-align: center;
+          line-height: 2;
+          &:hover{
+            background-color: rgba($blue,0.8);
+          }
+        }
+      }
+    }
+  }
+}
