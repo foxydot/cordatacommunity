@@ -31,7 +31,7 @@
 /* Colors */
 $red: #f00;
 $linkred: #b1536f;
-$orange: rgb(230, 111, 54);
+$orange: rgb(241, 149, 45); //#f1952D
 $yellow: rgb(255, 190, 11);
 $green: #2EA645;
 $blue: rgb(76, 168, 223);
@@ -72,12 +72,12 @@ $link_hvr: $blue;
 $border: $ltgrey;
 $input_bkg: $offwhite;
 $input_border: $ltgrey;
-$btn_bkg: $offwhite;
-$btn_txt: $blue;
-$btn_border: $blue;
-$btn_hvr_bkg: $ltblue;
-$btn_hvr_txt: $blue;
-$btn_hvr_border: $blue;
+$btn_bkg: $orange;
+$btn_txt: $white;
+$btn_border: $white;
+$btn_hvr_bkg: rgba($orange,0.8);
+$btn_hvr_txt: $white;
+$btn_hvr_border: $white;
 $btn_dis_bkg: $ltgrey;
 $btn_dis_txt: $medgrey;
 
