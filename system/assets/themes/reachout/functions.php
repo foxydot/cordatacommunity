@@ -30,8 +30,8 @@ include_once( get_stylesheet_directory() . '/lib/inc/helper-functions.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/msd-functions.php' ); //should this go to plugin?
 include_once( get_stylesheet_directory() . '/lib/inc/header-login.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/page-banner-support.php' );
-include_once( get_stylesheet_directory() . '/lib/inc/genesis_blog_grid.php' );
-new MSDLab_Page_Banner_Support(array());
+//include_once( get_stylesheet_directory() . '/lib/inc/genesis_blog_grid.php' );
+//new MSDLab_Page_Banner_Support(array());
 
 // Child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'Deitrich' );
@@ -146,8 +146,8 @@ remove_action( 'genesis_entry_footer', 'genesis_post_meta'); //remove the meta (
 //add_filter( 'genesis_next_link_text', 'msdlab_older_link_text', 20);
 //add_filter( 'genesis_prev_link_text', 'msdlab_newer_link_text', 20);
 
-remove_action( 'genesis_after_endwhile', 'genesis_prev_next_post_nav' );
-add_action( 'genesis_after_endwhile', 'msdlab_prev_next_post_nav' );
+//remove_action( 'genesis_after_endwhile', 'genesis_prev_next_post_nav' );
+//add_action( 'genesis_after_endwhile', 'msdlab_prev_next_post_nav' );
 
 
 /*** FOOTER ***/

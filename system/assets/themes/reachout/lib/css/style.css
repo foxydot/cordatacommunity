@@ -1832,6 +1832,24 @@ i.fa {
 .logged-in .menu-item.logged-in {
   display: inline-block; }
 
+.footer-widgets .msd-connected .connected-form {
+  display: block; }
+  .footer-widgets .msd-connected .connected-form .gform_body {
+    width: 75%;
+    float: left; }
+    .footer-widgets .msd-connected .connected-form .gform_body input {
+      width: 100%; }
+    .footer-widgets .msd-connected .connected-form .gform_body label {
+      display: none; }
+  .footer-widgets .msd-connected .connected-form .gform_footer {
+    width: 25%;
+    float: left;
+    clear: none;
+    margin: 0; }
+
+.footer-widgets .msd-connected .connected-social {
+  clear: both; }
+
 @media only screen and (min-width: 768px) {
   /* Accessible Menu
   --------------------------------------------- */

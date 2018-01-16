@@ -75,3 +75,30 @@ i.fa{
     display: inline-block;
   }
 }
+
+.footer-widgets{
+  .msd-connected{
+    .connected-form{
+      display: block;
+      .gform_body {
+        width: 75%;
+        float: left;
+        input{
+          width: 100%;
+        }
+        label{
+          display: none;
+        }
+      }
+      .gform_footer{
+        width: 25%;
+        float: left;
+        clear: none;
+        margin: 0;
+      }
+    }
+    .connected-social{
+      clear: both;
+    }
+  }
+}
