@@ -375,7 +375,8 @@ if (!class_exists('MSDTeamCPT')) {
 
             $contact_info->the_field('email');
             if($contact_info->get_the_value() != ''){
-                $team_contact_info .= '<li class="email"><i class="fa fa-envelope-alt">'.msd_str_fmt($contact_info->get_the_value(),'email').'</li>';
+                //$team_contact_info .= '<li class="email"><a href="mailto:'.antispambot($contact_info->get_the_value()).'" class="email"><i class="fa fa-envelope"></i>'.antispambot($contact_info->get_the_value()).'</a></li>';
+                $team_contact_info .= '<li class="email"><a href="mailto:'.antispambot($contact_info->get_the_value()).'" class="email"><i class="fa fa-envelope"></i></a></li>';
             }
 
             $social = array();
@@ -385,7 +386,7 @@ if (!class_exists('MSDTeamCPT')) {
                     'text'  => 'Twitter',
                 ),
                 'linked_in' => array(
-                    'class' => 'fa fa-linked-in',
+                    'class' => 'fa fa-linkedin',
                     'text'  => 'Connect',
                 ),
                 'facebook' => array(
@@ -413,10 +414,7 @@ if (!class_exists('MSDTeamCPT')) {
                     '.$jobtitle;
             $teamstr[] = '
                     <ul class="team_member-contact-info">
-                    '.$team_contact_info.'
-                    </ul>
-                    <ul class="team_member-social-info">
-                    '.$social_str.'
+                    '.$team_contact_info.$social_str.'
                     </ul>
                         <div class="bio">'.$team->post_content.'</div>';
             $teamstr[] = '

@@ -1864,28 +1864,26 @@ i.fa {
 .team-display-grid .team .name {
   color: #f1952d; }
 
-.team-display-grid .team .team_member-contact-info, .team-display-grid .team .team_member-social-info {
+.team-display-grid .team .team_member-contact-info {
   list-style-type: none;
   margin: 0;
-  padding: 0; }
-  .team-display-grid .team .team_member-contact-info li, .team-display-grid .team .team_member-social-info li {
+  padding: 0;
+  margin-bottom: 2em; }
+  .team-display-grid .team .team_member-contact-info li {
     display: inline-block;
     margin: 0;
     padding: 0 0.5em; }
-
-.team-display-grid .team .team_member-social-info {
-  margin-bottom: 2em; }
-  .team-display-grid .team .team_member-social-info li a {
-    display: inline-block;
-    background-color: #4ca8df;
-    border-radius: 100%;
-    color: #FFF;
-    height: 2em;
-    width: 2em;
-    text-align: center;
-    line-height: 2; }
-    .team-display-grid .team .team_member-social-info li a:hover {
-      background-color: rgba(76, 168, 223, 0.8); }
+    .team-display-grid .team .team_member-contact-info li a {
+      display: block;
+      background-color: #4ca8df;
+      border-radius: 100%;
+      color: #FFF;
+      height: 2em;
+      width: 2em;
+      text-align: center;
+      line-height: 2; }
+      .team-display-grid .team .team_member-contact-info li a:hover {
+        background-color: rgba(76, 168, 223, 0.8); }
 
 @media only screen and (min-width: 768px) {
   /* Accessible Menu

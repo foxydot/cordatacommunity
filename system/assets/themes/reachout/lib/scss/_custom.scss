@@ -131,21 +131,17 @@ i.fa{
       color: $orange;
     }
     .jobtitle{}
-    .team_member-contact-info,.team_member-social-info{
+    .team_member-contact-info{
       list-style-type: none;
       margin: 0;
       padding: 0;
+      margin-bottom: 2em;
       li{
         display: inline-block;
         margin: 0;
         padding: 0 0.5em;
-      }
-    }
-    .team_member-social-info{
-      margin-bottom: 2em;
-      li{
         a{
-          display: inline-block;
+          display: block;
           background-color: $blue;
           border-radius: 100%;
           color: $white;
