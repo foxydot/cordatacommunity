@@ -23,7 +23,7 @@ function be_grid_loop_pagination( $query = false ) {
     // Specify pagination
     return array(
         'features_on_front' => 1,
-        'teasers_on_front' => 6,
+        'teasers_on_front' => 7,
         'features_inside' => 0,
         'teasers_inside' => 8,
     );
