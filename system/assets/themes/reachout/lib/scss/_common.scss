@@ -36,7 +36,6 @@
 }
 
 .after-entry,
-.archive-description,
 .author-box {
   background-color: #fff;
   font-size: 18px;
@@ -83,26 +82,28 @@
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1em;
 }
 
 .entry-title {
-  color: $orange;
+  color: $blue;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-  color: $orange;
+  color: $blue;
   font-weight: 700;
   text-decoration: none;
 }
 
 .entry-title a:focus,
 .entry-title a:hover {
-  color: $dkorange;
+  color: $dkblue;
 }
 
 .widget-title {

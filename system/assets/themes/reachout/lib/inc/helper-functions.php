@@ -106,7 +106,7 @@ function msdlab_maybe_move_title(){
     if(is_page() && $template_file=='default'){
         remove_action('genesis_entry_header','genesis_do_post_title'); //move the title out of the content area
         add_action('msdlab_title_area','msdlab_do_section_title');
-        add_action('genesis_after_header','msdlab_do_title_area');
+        add_action('genesis_before_content','msdlab_do_title_area');
     }
 }
 function msdlab_do_section_title(){
@@ -132,10 +132,10 @@ function msdlab_do_section_title(){
         print '</div>';
         print '</div>';
     } elseif(is_home() || is_single()) {
-        $blog_home = get_post(get_option( 'page_for_posts' ));
-        $title = apply_filters( 'genesis_post_title_text', $blog_home->post_title );//* Wrap in H1 on singular pages
-        $background = strlen(msdlab_get_thumbnail_url($myid,'full'))>0?' style="background-image:url('.msdlab_get_thumbnail_url($blog_home->ID,'full').')"':'';
-        print '<div class="banner clearfix"'.$background.'>';
+        $blog_home = get_post(get_option('page_for_posts'));
+        $title = apply_filters('genesis_post_title_text', $blog_home->post_title);//* Wrap in H1 on singular pages
+        $background = strlen(msdlab_get_thumbnail_url($myid, 'full')) > 0 ? ' style="background-image:url(' . msdlab_get_thumbnail_url($blog_home->ID, 'full') . ')"' : '';
+        print '<div class="banner clearfix"' . $background . '>';
         print '<div class="texturize">';
         print '<div class="gradient">';
         print '<div class="wrap">';

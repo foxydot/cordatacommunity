@@ -42,6 +42,7 @@
   .sidebar-content-sidebar .content {
     float: left;
     order: 1;
+    border-right: 1px solid $ltgrey;
   }
 
   .content-sidebar-sidebar .content,
@@ -226,7 +227,7 @@
   /* # Content
   ----------------------------------------------------------------------------------------------------- */
   .entry {
-    padding: 2em;
+    padding: 0 2em 0 0;
   }
   
   div.building-row {

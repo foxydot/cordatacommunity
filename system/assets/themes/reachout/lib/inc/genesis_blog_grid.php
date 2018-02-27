@@ -89,12 +89,11 @@ function be_grid_loop_post_classes( $classes ) {
         // Features
         if( $wp_query->current_post < $grid_args['features_on_front'] ) {
             $classes[] = 'genesis-feature';
-            $classes[] = 'col-md-12';
+            $classes[] = 'col-xs-12';
 
             // Teasers
         } else {
             $classes[] = 'genesis-teaser';
-            $classes[] = 'col-sm-6';
             $classes[] = 'col-xs-12';
         }
 
@@ -104,12 +103,11 @@ function be_grid_loop_post_classes( $classes ) {
         // Features
         if( $wp_query->current_post < $grid_args['features_inside'] ) {
             $classes[] = 'genesis-feature';
-            $classes[] = 'col-md-12';
+            $classes[] = 'col-xs-12';
 
             // Teasers
         } else {
             $classes[] = 'genesis-teaser';
-            $classes[] = 'col-sm-6';
             $classes[] = 'col-xs-12';
         }
 
@@ -136,10 +134,10 @@ function be_grid_loop_image( $defaults ) {
 
     // Feature
     if( ( ! $wp_query->query_vars['paged'] && $wp_query->current_post < $grid_args['features_on_front'] ) || ( $wp_query->query_vars['paged'] && $wp_query->current_post < $grid_args['features_inside'] ) )
-        $defaults['size'] = 'child_full';
+        $defaults['size'] = 'large';
 
     if( ( ! $wp_query->query_vars['paged'] && $wp_query->current_post > ( $grid_args['features_on_front'] - 1 ) ) || ( $wp_query->query_vars['paged'] && $wp_query->current_post > ( $grid_args['features_inside'] - 1 ) ) )
-        $defaults['size'] = 'child_thumbnail';
+        $defaults['size'] = 'thumbnail';
 
     return $defaults;
 }
@@ -190,23 +188,31 @@ function msdlab_switch_content() {
     if(is_cpt('post') && (is_archive() || is_home())){
         remove_action('genesis_entry_content', 'genesis_do_post_content');
         remove_action('genesis_entry_content', 'genesis_do_post_image',8);
+        remove_action( 'genesis_entry_header', 'genesis_post_info');
+        remove_action( 'genesis_entry_header', 'genesis_post_info', 12);
         remove_action( 'genesis_entry_header', 'msdlab_do_post_subtitle', 13);
         remove_action( 'genesis_entry_header', 'genesis_do_post_title');
-        add_action( 'genesis_entry_header', 'msdlab_grid_loop_header');
-        add_action( 'genesis_entry_header', 'genesis_do_post_title');
-        add_action('genesis_entry_content', 'msdlab_grid_loop_content');
+        if(in_array( 'genesis-feature', get_post_class() )) {
+            add_action('genesis_entry_header', 'genesis_do_post_title');
+            add_action('genesis_entry_header', 'genesis_post_info');
+            add_action('genesis_entry_header', 'msdlab_grid_loop_header');
+            add_action('genesis_entry_content', 'msdlab_grid_loop_content');
+        } else {
+            add_action('genesis_entry_header', 'msdlab_grid_loop_header');
+            add_action('genesis_entry_header', 'genesis_do_post_title');
+            add_action('genesis_entry_header', 'genesis_post_info');
+            add_action('genesis_entry_content', 'msdlab_grid_loop_content');
+        }
     }
 }
 
 function msdlab_grid_loop_content() {
     global $_genesis_loop_args;
+    the_excerpt();
     if ( in_array( 'genesis-feature', get_post_class() ) ) {
-        the_excerpt();
+
         printf( '<a href="%s" title="%s" class="readmore-button alignright">%s</a>', get_permalink(), the_title_attribute('echo=0'), 'Continue Reading >' );
 
-    }
-    else {
-        return false;
     }
 }
 
@@ -220,6 +226,7 @@ function msdlab_grid_loop_header() {
         printf( '<a href="%s" title="%s" class="grid_image_wrapper">%s</a>', get_permalink(), the_title_attribute('echo=0'), genesis_get_image() );
     }
 }
+
 function msdlab_get_comments_number(){ //not used
     $num_comments = get_comments_number();
     if ($num_comments == '1') $comments = $num_comments.' ' . __( 'comment', 'adaptation' );

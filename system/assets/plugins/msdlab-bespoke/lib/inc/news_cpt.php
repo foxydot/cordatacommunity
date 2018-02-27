@@ -130,7 +130,7 @@ if (!class_exists('MSDNewsCPT')) {
 		        'labels' => $labels,
 		        'hierarchical' => false,
 		        'description' => 'News',
-                'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail' ),
+                'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'genesis-cpt-archives-settings' ),
 		        'taxonomies' => array( 'news_category', 'news_tag' ),
 		        'public' => true,
 		        'show_ui' => true,

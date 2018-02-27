@@ -653,7 +653,6 @@ th:first-child {
   clear: both; }
 
 .after-entry,
-.archive-description,
 .author-box {
   background-color: #fff;
   font-size: 18px;
@@ -687,23 +686,25 @@ th:first-child {
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
-  font-size: 20px;
-  font-size: 2rem; }
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1em; }
 
 .entry-title {
-  color: #f1952d;
+  color: #4ca8df;
   font-weight: 700;
-  font-size: 2em; }
+  font-size: 1.5em; }
 
 .entry-title a,
 .sidebar .widget-title a {
-  color: #f1952d;
+  color: #4ca8df;
   font-weight: 700;
   text-decoration: none; }
 
 .entry-title a:focus,
 .entry-title a:hover {
-  color: #ad610c; }
+  color: #2c3e50; }
 
 .widget-title {
   color: #2c3e50;
@@ -1792,30 +1793,37 @@ p.entry-meta {
     background: #4ca8df; }
 
 .entry-subtitle {
-  font-size: 1.6em; }
+  font-size: 1.2em; }
 
 i.fa {
   margin: 0 auto; }
 
-.genesis-blog-grid article.genesis-feature .entry-header .featured_image_wrapper, .genesis-blog-grid article.genesis-feature .entry-header .grid_image_wrapper, .genesis-blog-grid article.genesis-teaser .entry-header .featured_image_wrapper, .genesis-blog-grid article.genesis-teaser .entry-header .grid_image_wrapper {
-  text-align: center;
-  margin: 0 auto 1em;
-  display: block;
-  min-height: 22em; }
-
-.genesis-blog-grid article.genesis-feature .entry-content .readmore-button, .genesis-blog-grid article.genesis-teaser .entry-content .readmore-button {
-  color: #edf6fc;
-  background: #4ca8df;
-  border-radius: 1.5em;
-  padding: 0 1em;
-  border: 1px solid #4ca8df;
-  transition: all 0.5s; }
-  .genesis-blog-grid article.genesis-feature .entry-content .readmore-button:hover, .genesis-blog-grid article.genesis-teaser .entry-content .readmore-button:hover {
-    color: #4ca8df;
-    background: #edf6fc; }
-
 .genesis-blog-grid article.genesis-feature {
   border-bottom: 1px solid #999; }
+  .genesis-blog-grid article.genesis-feature .entry-header .featured_image_wrapper {
+    text-align: center;
+    margin: 0 auto 1em;
+    display: block;
+    min-height: 22em; }
+  .genesis-blog-grid article.genesis-feature .entry-content .readmore-button {
+    color: #edf6fc;
+    background: #4ca8df;
+    border-radius: 1.5em;
+    padding: 0 1em;
+    border: 1px solid #4ca8df;
+    transition: all 0.5s; }
+    .genesis-blog-grid article.genesis-feature .entry-content .readmore-button:hover {
+      color: #4ca8df;
+      background: #edf6fc; }
+
+.genesis-blog-grid article.genesis-teaser {
+  clear: both;
+  display: block; }
+  .genesis-blog-grid article.genesis-teaser .entry-header .grid_image_wrapper {
+    text-align: center;
+    margin: 0 2em 2em 0;
+    display: inline-block;
+    float: left; }
 
 .single-post .content-sidebar-wrap main.content {
   border-right: 1px solid #CCC; }
@@ -1843,9 +1851,6 @@ i.fa {
 
 .footer-widgets .msd-connected .connected-social {
   clear: both; }
-
-.archive-description {
-  display: none; }
 
 #gform_1 .gform_body {
   width: 50%;
@@ -1887,6 +1892,14 @@ i.fa {
 
 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
   padding: 0.5em !important; }
+
+.genesis-feature .entry-title, .single-post .entry-title {
+  color: #f1952d;
+  font-size: 2em; }
+  .genesis-feature .entry-title a, .single-post .entry-title a {
+    color: #f1952d; }
+    .genesis-feature .entry-title a:hover, .single-post .entry-title a:hover {
+      color: #ad610c; }
 
 @media only screen and (min-width: 768px) {
   /* Accessible Menu
@@ -1931,7 +1944,8 @@ i.fa {
   .content-sidebar-sidebar .content,
   .sidebar-content-sidebar .content {
     float: left;
-    order: 1; }
+    order: 1;
+    border-right: 1px solid #CCC; }
   .full-width-content .content {
     width: 100%; }
   /* ### Primary Sidebar */
@@ -2040,7 +2054,7 @@ i.fa {
   /* # Content
   ----------------------------------------------------------------------------------------------------- */
   .entry {
-    padding: 2em; }
+    padding: 0 2em 0 0; }
   div.building-row div.building-item {
     width: 45%;
     display: inline-block;
