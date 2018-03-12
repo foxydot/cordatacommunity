@@ -1877,19 +1877,18 @@ i.fa {
 .footer-widgets .msd-connected .connected-social {
   clear: both; }
 
-#gform_1 .gform_body {
-  width: 50%;
-  float: left; }
-  #gform_1 .gform_body input {
-    width: 100%; }
-  #gform_1 .gform_body label {
-    display: none; }
+#gform_1 .gform_body li.gfield {
+  margin: 0; }
+
+#gform_1 .gform_body input {
+  width: 100%; }
+
+#gform_1 .gform_body label {
+  display: none; }
 
 #gform_1 .gform_footer {
-  width: 50%;
-  float: left;
-  clear: none;
-  margin: 0; }
+  margin: 0;
+  padding-top: 1em; }
 
 .team-display-grid .team .name {
   color: #f1952d; }

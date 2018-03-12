@@ -113,22 +113,21 @@ i.fa{
 }
 
 #gform_1{
-  .gform_body {
-    width: 50%;
-    float: left;
-    input{
-      width: 100%;
+    .gform_body {
+      li.gfield{
+        margin: 0;
+      }
+      input {
+        width: 100%;
+      }
+      label {
+        display: none;
+      }
     }
-    label{
-      display: none;
+    .gform_footer {
+      margin: 0;
+      padding-top: 1em;
     }
-  }
-  .gform_footer{
-    width: 50%;
-    float: left;
-    clear: none;
-    margin: 0;
-  }
 }
 
 
