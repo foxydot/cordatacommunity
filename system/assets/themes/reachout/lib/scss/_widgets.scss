@@ -66,3 +66,31 @@ ul.menu{
   }
 }
 }
+
+h4.rltdpstsplgn_posts_title{
+  text-transform: none;
+  font-size: 1em;
+  margin: 0;
+}
+
+.rltdpstsplgn-latest-posts .entry-meta > span:not(:first-child):before, .rltdpstsplgn-related-posts .entry-meta > span:not(:first-child):before, .rltdpstsplgn-featured-posts .entry-meta > span:not(:first-child):before, .rltdpstsplgn-popular-posts .entry-meta > span:not(:first-child):before{
+  content: '' !important;
+  margin: 0 !important;
+}
+
+.rltdpstsplgn-popular-posts,.rltdpstsplgn-related-posts,.rltdpstsplgn-featured-posts{
+  article{
+    clear:both;
+  }
+  img {
+    float: right;
+    padding: 5px 0 5px 5px;
+    box-shadow: none !important;
+  }
+  .entry-meta{
+    font-size: 0.8em;
+    a{
+      color: $dkgrey;
+    }
+  }
+}

@@ -38,7 +38,9 @@ class MSDLabClientCustom
         /*
          * Pull in and define supports
          */
+        require_once(plugin_dir_path(__FILE__) . 'lib/inc/_media.php');
         require_once(plugin_dir_path(__FILE__) . 'lib/inc/_utility.php');
+        require_once(plugin_dir_path(__FILE__) . 'lib/inc/_widgets.php');
         require_once(plugin_dir_path(__FILE__) . 'lib/inc/news_cpt.php');
         if(class_exists('MSDNewsCPT')){
             $this->news_class = new MSDNewsCPT();

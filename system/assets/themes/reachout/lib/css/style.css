@@ -836,6 +836,28 @@ img.alignright,
 .widget_nav_menu ul.menu li {
   line-height: 1; }
 
+h4.rltdpstsplgn_posts_title {
+  text-transform: none;
+  font-size: 1em;
+  margin: 0; }
+
+.rltdpstsplgn-latest-posts .entry-meta > span:not(:first-child):before, .rltdpstsplgn-related-posts .entry-meta > span:not(:first-child):before, .rltdpstsplgn-featured-posts .entry-meta > span:not(:first-child):before, .rltdpstsplgn-popular-posts .entry-meta > span:not(:first-child):before {
+  content: '' !important;
+  margin: 0 !important; }
+
+.rltdpstsplgn-popular-posts article, .rltdpstsplgn-related-posts article, .rltdpstsplgn-featured-posts article {
+  clear: both; }
+
+.rltdpstsplgn-popular-posts img, .rltdpstsplgn-related-posts img, .rltdpstsplgn-featured-posts img {
+  float: right;
+  padding: 5px 0 5px 5px;
+  box-shadow: none !important; }
+
+.rltdpstsplgn-popular-posts .entry-meta, .rltdpstsplgn-related-posts .entry-meta, .rltdpstsplgn-featured-posts .entry-meta {
+  font-size: 0.8em; }
+  .rltdpstsplgn-popular-posts .entry-meta a, .rltdpstsplgn-related-posts .entry-meta a, .rltdpstsplgn-featured-posts .entry-meta a {
+    color: #2A2B30; }
+
 /* # Plugins
 ---------------------------------------------------------------------------------------------------- */
 /* ## Genesis eNews Extended
@@ -1457,6 +1479,9 @@ p.entry-meta {
 .sidebar .widget,
 .sidebar .sidebarcontent {
   padding: 5vw 0; }
+
+.sidebar.sidebar-primary .widget {
+  clear: both; }
 
 /* # Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
