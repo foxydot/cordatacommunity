@@ -97,6 +97,9 @@
   }
   .section.text-white{
     color: $offwhite;
+    a,a:visited,a:hover{
+      color: $offwhite;
+    }
   }
   .section.text-shadow{
     text-shadow: 0 0 0.5em rgba($dkgrey,0.6);

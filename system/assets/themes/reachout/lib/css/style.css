@@ -1720,6 +1720,8 @@ p.entry-meta {
     color: #2A2B30; }
   .sectioned-page-wrapper .section.text-white {
     color: #edf6fc; }
+    .sectioned-page-wrapper .section.text-white a, .sectioned-page-wrapper .section.text-white a:visited, .sectioned-page-wrapper .section.text-white a:hover {
+      color: #edf6fc; }
   .sectioned-page-wrapper .section.text-shadow {
     text-shadow: 0 0 0.5em rgba(42, 43, 48, 0.6); }
   .sectioned-page-wrapper .section.col-odd-offwhite .column-1, .sectioned-page-wrapper .section.col-odd-offwhite .column-3 {
