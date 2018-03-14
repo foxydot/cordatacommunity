@@ -117,7 +117,55 @@ function be_grid_loop_post_classes( $classes ) {
 }
 add_filter( 'post_class', 'be_grid_loop_post_classes' );
 
+add_filter('genesis_pre_get_image','msdlab_fix_fallback_image_bug',10,3);
+function msdlab_fix_fallback_image_bug($return, $args, $post){
 
+    // If post thumbnail (native WP) exists, use its id.
+    if ( 0 === $args['num'] && has_post_thumbnail( $args['post_id'] ) ) {
+        $id = get_post_thumbnail_id( $args['post_id'] );
+    } elseif ( 'first-attached' === $args['fallback'] ) {
+        // Else if the first (default) image attachment is the fallback, use its id.
+        preg_match('|wp-image-(\d+)|',$post->post_content,$matches);
+        $id = $matches[1];
+    } elseif ( is_int( $args['fallback'] ) ) {
+        // Else if fallback id is supplied, use it.
+        $id = $args['fallback'];
+    }
+
+    // If we have an id, get the HTML and URL.
+    if ( isset( $id ) ) {
+        $html        = wp_get_attachment_image( $id, $args['size'], false, $args['attr'] );
+        list( $url ) = wp_get_attachment_image_src( $id, $args['size'], false, $args['attr'] );
+    } elseif ( is_array( $args['fallback'] ) ) {
+        // Else if fallback HTML and URL exist, use them.
+        $id   = 0;
+        $html = $args['fallback']['html'];
+        $url  = $args['fallback']['url'];
+    } else {
+        // No image.
+        return false;
+    }
+
+    // Source path, relative to the root.
+    $src = str_replace( home_url(), '', $url );
+
+    // Determine output.
+    if ( 'html' === mb_strtolower( $args['format'] ) ) {
+        $output = $html;
+    } elseif ( 'url' === mb_strtolower( $args['format'] ) ) {
+        $output = $url;
+    } else {
+        $output = $src;
+    }
+
+    // Return false if $url is blank.
+    if ( empty( $url ) ) {
+        $output = false;
+    }
+
+    // Return data, filtered.
+    return apply_filters( 'genesis_get_image', $output, $args, $id, $html, $url, $src );
+}
 
 /**
  * Grid Loop Featured Image
@@ -138,7 +186,6 @@ function be_grid_loop_image( $defaults ) {
 
     if( ( ! $wp_query->query_vars['paged'] && $wp_query->current_post > ( $grid_args['features_on_front'] - 1 ) ) || ( $wp_query->query_vars['paged'] && $wp_query->current_post > ( $grid_args['features_inside'] - 1 ) ) )
         $defaults['size'] = 'thumbnail';
-
     return $defaults;
 }
 add_filter( 'genesis_get_image_default_args', 'be_grid_loop_image' );
@@ -220,7 +267,6 @@ function msdlab_grid_loop_header() {
     global $_genesis_loop_args;
     if ( in_array( 'genesis-feature', get_post_class() ) ) {
         printf( '<a href="%s" title="%s" class="featured_image_wrapper">%s</a>', get_permalink(), the_title_attribute('echo=0'), genesis_get_image() );
-
     }
     else {
         printf( '<a href="%s" title="%s" class="grid_image_wrapper">%s</a>', get_permalink(), the_title_attribute('echo=0'), genesis_get_image() );
