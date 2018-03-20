@@ -20,7 +20,7 @@ if (!class_exists('MSDLab_Subtitle_Support')) {
             add_action( 'init', array(&$this,'register_metaboxes') );
             add_action('admin_print_styles', array(&$this,'add_admin_styles') );
             add_action('admin_footer',array(&$this,'footer_hook') );
-            add_action( 'genesis_entry_header', array(&$this,'msdlab_do_post_subtitle') );
+            add_action('genesis_entry_header', array(&$this,'msdlab_do_post_subtitle') );
             //Filters
         }
 

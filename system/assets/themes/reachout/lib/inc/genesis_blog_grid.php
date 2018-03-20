@@ -233,20 +233,24 @@ function msdlab_post_navigation_links() {
 add_action('genesis_before_entry', 'msdlab_switch_content');
 function msdlab_switch_content() {
     if(is_cpt('post') && (is_archive() || is_home())){
+        global $subtitle_support;
         remove_action('genesis_entry_content', 'genesis_do_post_content');
         remove_action('genesis_entry_content', 'genesis_do_post_image',8);
         remove_action( 'genesis_entry_header', 'genesis_post_info');
         remove_action( 'genesis_entry_header', 'genesis_post_info', 12);
-        remove_action( 'genesis_entry_header', 'msdlab_do_post_subtitle', 13);
+        remove_action( 'genesis_entry_header', 'msdlab_do_post_subtitle');
+        remove_action( 'genesis_entry_header', array($subtitle_support,'msdlab_do_post_subtitle'));
         remove_action( 'genesis_entry_header', 'genesis_do_post_title');
         if(in_array( 'genesis-feature', get_post_class() )) {
             add_action('genesis_entry_header', 'genesis_do_post_title');
+            add_action('genesis_entry_header', array($subtitle_support,'msdlab_do_post_subtitle'));
             add_action('genesis_entry_header', 'genesis_post_info');
             add_action('genesis_entry_header', 'msdlab_grid_loop_header');
             add_action('genesis_entry_content', 'msdlab_grid_loop_content');
         } else {
             add_action('genesis_entry_header', 'msdlab_grid_loop_header');
             add_action('genesis_entry_header', 'genesis_do_post_title');
+            add_action('genesis_entry_header', array($subtitle_support,'msdlab_do_post_subtitle'));
             add_action('genesis_entry_header', 'genesis_post_info');
             add_action('genesis_entry_content', 'msdlab_grid_loop_content');
         }
